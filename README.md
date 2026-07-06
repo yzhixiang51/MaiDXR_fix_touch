@@ -6,6 +6,28 @@ Discord: [Discord](https://discord.gg/4aFV5QJWN5)
 [Chinese 中文 README](https://github.com/xiaopeng12138/MaiDXR/blob/main/README_zh.md)
 
 
+### About this Fork
+
+This fork main fixes issues where touch zones were unresponsive, had overly large判定 ranges, and dropped TOUCH HOLD/HOLD events. It brings the touch experience as close as possible to the original, making it buttery smooth.
+
+(It seems few others have encountered the same problems—maybe they are specific to certain PCs, game versions, or com0com configurations. Either way, this fixes them.)
+
+Other additions (in `config`):
+
+- `"DiagnosticLogEnabled": 0,   # Very detailed logging for touch debugging`
+- `"DiagnosticLogPath": "./log", # Log file path`
+- `"TouchHapticAmplitude": 10,  # Touch controller vibration intensity`
+- `"TouchPollFrequency": 90,    # Touch polling frequency (Hz)`
+- `"TouchReleaseBufferFrames": 2, # Touch state buffering (in frames)`
+
+### Before fix:
+---
+![0](./src/old.gif)
+
+### After fix:
+---
+![1](./src/new.gif)
+
 **About this project**
 ---
 - This project is an update of https://github.com/xiaopeng12138/MaiMai-VR. 

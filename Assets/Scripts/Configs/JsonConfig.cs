@@ -67,6 +67,28 @@ public static class JsonConfig {
         saveFile();
     }
 
+    public static int GetIntWithDefault(string key, int defaultValue)
+    {
+        ensureInitialization();
+        if (config.ContainsKey(key))
+            return config.Value<int>(key);
+
+        config[key] = defaultValue;
+        saveFile();
+        return defaultValue;
+    }
+
+    public static string GetStringWithDefault(string key, string defaultValue)
+    {
+        ensureInitialization();
+        if (config.ContainsKey(key))
+            return config.Value<string>(key);
+
+        config[key] = defaultValue;
+        saveFile();
+        return defaultValue;
+    }
+
     public static bool HasKey(string key) {
         ensureInitialization();
         return config.ContainsKey(key);

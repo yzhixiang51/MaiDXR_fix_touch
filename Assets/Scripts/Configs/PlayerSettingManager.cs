@@ -63,10 +63,10 @@ public class PlayerSettingManager : MonoBehaviour
                     slider.value = HandPositionZ;
                     break;
                 case "HpDuration":
-                    slider.value = HapticManagers[0].duration;
+                    slider.value = HapticManagers[0].buttonDuration;
                     break;
                 case "HpAmplitude":
-                    slider.value = HapticManagers[0].amplitude;
+                    slider.value = HapticManagers[0].buttonAmplitude;
                     break;
             }
         }
@@ -104,14 +104,14 @@ public class PlayerSettingManager : MonoBehaviour
     void GetHapticDuration()
     {
         if (PlayerConfig.HasKey("HapticDuration"))
-            HapticManagers[0].duration = (float)PlayerConfig.GetDouble("HapticDuration");
-        SetHapticDuration(HapticManagers[0].duration);
+            HapticManagers[0].buttonDuration = (float)PlayerConfig.GetDouble("HapticDuration");
+        SetHapticDuration(HapticManagers[0].buttonDuration);
     }
     void GetHapticAmplitude()
     {
         if (PlayerConfig.HasKey("HapticAmplitude"))
-            HapticManagers[0].amplitude = (float)PlayerConfig.GetDouble("HapticAmplitude");
-        SetHapticAmplitude(HapticManagers[0].amplitude);
+            HapticManagers[0].buttonAmplitude = (float)PlayerConfig.GetDouble("HapticAmplitude");
+        SetHapticAmplitude(HapticManagers[0].buttonAmplitude);
     }
 
     public void SetPlayerHeight()
@@ -151,7 +151,7 @@ public class PlayerSettingManager : MonoBehaviour
     {
         foreach (var controller in HapticManagers)
         {
-            controller.duration = duration;
+            controller.buttonDuration = duration;
         }
         PlayerConfig.SetDouble("HapticDuration", duration);
     }
@@ -159,7 +159,7 @@ public class PlayerSettingManager : MonoBehaviour
     {
         foreach (var controller in HapticManagers)
         {
-            controller.amplitude = amplitude;
+            controller.buttonAmplitude = amplitude;
         }
         PlayerConfig.SetDouble("HapticAmplitude", amplitude);
     }

@@ -3,6 +3,29 @@
 
 交流Discord: [Discord](https://discord.gg/pGBA5HygSf)
 
+### 关于这个Fork
+
+本Fork主要修改了修复了触摸分区点不到，判定范围过大，掉TOUCH HOLD/HOLD等问题，尽可能贴近原版触摸，丝般顺滑。
+
+（似乎并没有见到碰到同样问题的情况，可能跟特定电脑或者本体版本有关？还是com0com配置的问题，总之这样可以修好）
+
+其他新增(config里)：
+
+-  "DiagnosticLogEnabled": 0, # 非常详细的日志，用于调试触摸
+-  "DiagnosticLogPath": "./log", # 日志路径
+-  "TouchHapticAmplitude": 10, # 触摸手柄震动强度
+-  "TouchPollFrequency": 90, # 触摸轮询频率
+- "TouchReleaseBufferFrames": 2, # 触摸状态缓冲(单位：帧)
+
+### 修复前：
+---
+![0](./src/old.gif)
+
+### 修复后：
+---
+![1](./src/new.gif)
+
+
 关于这个项目
 ---
 - 本项目是https://github.com/xiaopeng12138/MaiMai-VR 的重置更新
@@ -13,7 +36,6 @@
 - 可调整的震动反馈
 - 支持第三人称和平滑相机
 - 3个可自定义的按钮
-
 
 预览
 ---

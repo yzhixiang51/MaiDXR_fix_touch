@@ -132,3 +132,12 @@ $RECYCLE.BIN/
 
 config.json
 uWindowCapture.log
+
+# Diagnostic logs
+maiDXR_diag_*.log
+
+# Burst compiler debug artifacts
+**/MaiDXR_BurstDebugInformation_DoNotShip/
+
+# External reference projects (not part of MaiDXR)
+/git_other/
