@@ -3,7 +3,7 @@ Open Source VR Arcade Simulator
 
 Discord: [Discord](https://discord.gg/4aFV5QJWN5)
 
-[Chinese 中文 README](https://github.com/xiaopeng12138/MaiDXR/blob/main/README_zh.md)
+[Chinese 中文 README](https://github.com/yzhixiang51/MaiDXR_fix_touch/edit/main/README_zh.md)
 
 
 ### About this Fork
